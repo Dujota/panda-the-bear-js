@@ -1,6 +1,7 @@
 <h1>PART 1</h1>
-
+<p>
 1.) Select the element that contains the profile image (hint: look for the class). Change the src attribute so it points to a picture of your choosing instead.
+</p>
 
 const profileImg = document.querySelector('.profile-image')
 
