@@ -156,3 +156,76 @@ const portfolioContainer = document.querySelector(".portfolio-container")
 
 portfolioContainer.appendChild(pikachuClone);
 ```
+
+
+2. Wow, that was so satisfying I think we should do it 10 more times. Use a for loop to help you do this.
+```
+for (let i=0; i < 10; i++) {
+  portfolioContainer.appendChild(pikachu.cloneNode());
+};
+```
+
+3. Let’s add a message about when the page was last updated. We'll do this by appending a new <li> element to the <ul> in the sidebar (you might need to refresh the page to bring back the list items that we emptied out earlier).
+
+```
+const listItem = document.createElement('li');
+```
+
+It isn't part of the DOM yet, it's just floating in the void. We'll eventually attach it to the ```<ul>``` in the sidebar, below Panda's name, location, and phone number.
+
+Now we need a new ```<span>``` tag to go inside the ```<li>``` we just made. This span will eventually go in the left column below 'Phone'.
+
+```
+const leftSpan = document.createElement('span');
+````
+
+Next we need to make a "text node" in order to put text inside our new span. A text node is a chunk of plain text that lives inside some HTML tag in the DOM.
+```
+cosnt lastUpdated = document.createTextNode('Page last updated  on');
+```
+
+We're ready to put that new text node inside our new ``<span>`` using `appendChild`.
+
+```
+leftSpan.appendChild(lastUpdated);
+```
+
+And we'll put the <span> inside the <li>, again using appendChild.
+
+```
+listItem.appendChild(leftSpan);
+```
+
+
+At this point our new elements are attached to each other but are still floating in the void separate from our webpage's DOM.
+
+It's up to you to go through the same process for the second span that will go in the right-hand column of the <ul> (below Panda's phone number). Look up the docs for the Date class to find a way of displaying the current date inside your next text node.
+
+```
+const rightSpan = document.createElement('span');
+
+const dateUpdated = document.createTextNode(Date());
+
+rightSpan.appendChild(dateUpdated);
+
+listItem.appendChild(rightSpan);
+
+```
+
+
+
+
+After that, find a way of selecting the <ul> and append the new <li> to it. For bonus marks, apply the correct classes to these new elements of yours so the styling is consistent with the rest of the list items.
+
+```
+const bioInfoList = document.querySelector('.bio-info');
+bioInfoList.appendChild(listItem);
+```
+
+Bonus - adding Classes to elements
+
+```
+rightSpan.className = "bio-info-value bio-info-updatedAt"
+leftSpan.className = "bio-info-value bio-info-title"
+listItem.className = "bio-info-item"
+```
