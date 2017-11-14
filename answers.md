@@ -1,14 +1,15 @@
 <h1>PART 1</h1>
-<div>
+<p>
 1.) Select the element that contains the profile image (hint: look for the class). Change the src attribute so it points to a picture of your choosing instead.
-</div>
+</p>
 
+```
 const profileImg = document.querySelector('.profile-image')
 
 
 profileImg.src = "images/self-portrait-officebg.jpg"
 "images/self-portrait-officebg.jpg"
-
+```
 
 1-b.) Use the same approach to select the element that contains the photo of the sky and change the src attribute to another picture URL of your choosing.
 
