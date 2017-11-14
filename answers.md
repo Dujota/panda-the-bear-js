@@ -12,18 +12,20 @@ profileImg.src = "images/self-portrait-officebg.jpg"
 ```
 
 1-b.) Use the same approach to select the element that contains the photo of the sky and change the src attribute to another picture URL of your choosing.
-
+```
 const skyImg = document.querySelector('.photography')
 
 skyImg.src = "https://picsum.photos/325/225/?random"
 "https://picsum.photos/325/225/?random"
-
+```
+-
 2.) Select the heading that says "Panda the Bear" and change it to your own name.
-
+- 
+```
 const heading = document.querySelector('h1.highlight')
 
 heading.innerHTML = "Papa Sanch"
-
+```
 
 
 3.)Select the heading that says "Employment" and change it to something else. (hint: use a descendant selector)
