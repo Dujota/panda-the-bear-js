@@ -127,3 +127,32 @@ removeBio.innerText = ""
 ```
 
 <h1>Part 2</h1>
+
+<h4>Removing Elements from the DOM</h4>
+
+1. Panda the Bear is lying about their skills! Take the "time travel" skill off the page to satisfy your personal sense of justice. Use your googling and docs-skimming skillz to find a jQuery function that will allow you to remove elements from the DOM. (hint: there are multiple ways of doing this, but the parent() function might be useful when it comes to selecting the right element)
+
+```
+const timeTravel = $('#time-travel').parent('.bar-default');
+
+timeTravel.remove();
+```
+
+
+<h4>Adding Elements to the DOM</h4>
+
+1. that drawing of Pikachu is really cute. Let’s duplicate it using cloneNode()
+
+select item to clone & save to variable
+```
+const pikachu = document.querySelector("#right-image img");
+
+const pikachuClone = pikachu.cloneNode();
+```
+
+insert it at the bottom of the .portfolio-container using insertAdjacentHTML() or appendChild().
+```
+const portfolioContainer = document.querySelector(".portfolio-container")
+
+portfolioContainer.appendChild(pikachuClone);
+```
